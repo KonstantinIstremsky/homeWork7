@@ -1,72 +1,82 @@
 public class Main {
     public static void main(String[] args) {
-        // task 1
-        System.out.println("Task 1");
-        for (int i = 1; i <= 10; i++) {
-            System.out.println("Итерация цикла " + i);
+        System.out.println("Задача 1");
+        int desiredSum = 2459000;
+        int sum = 0;
+        int amount = 15000;
+        int month = 0;
+        double percent = 1D / 100;
+        while (sum < desiredSum) {
+            sum += amount;
+            sum = (int) (sum * (1 + percent));
+            month++;
+            System.out.println("Месяц " + month + " сумма накоплений равна " + sum + " рублей");
         }
-
-        // task 2
         System.out.println("Task 2");
-        for (int i = 10; i > 0; i--) {
-            System.out.println("Итерация цикла " + i);
+        int number = 0;
+        while (number < 10) {
+            number++;
+            System.out.print(number + " ");
         }
-
-        // task 3
+        System.out.println();
+        for (; number >= 1; number--) {
+            System.out.print(number + " ");
+        }
+        System.out.println();
         System.out.println("Task 3");
-        for (int i = 0; i <= 17; i = i + 2) {
-            System.out.println("Чётное число - " + i);
+        int population = 12_000_000;
+        int fPT = 17;
+        int mPT = 8;
+        int currentYear = 2024;
+        for (int year = currentYear; year < currentYear + 10; year++) {
+            population += population * fPT / 1000 - population * mPT / 1000;
+            System.out.println("Год " + year + " численность населения составляет " + population);
         }
-
-        // task 4
         System.out.println("Task 4");
-        for (int i = 10; i >= -10; i--) {
-            System.out.println("Итерация цикла " + i);
+        percent = 7D / 100;
+        desiredSum = 12_000_000;
+        sum = amount;
+        month = 0;
+        while (sum < desiredSum) {
+            sum = (int) (sum * (1 + percent));
+            month++;
+            System.out.println("Месяц " + month + " сумма накоплений равна " + sum + " рублей");
         }
-
-        // task 5
         System.out.println("Task 5");
-        for (int i = 1904; i <= 2096; i = i + 4) {
-            System.out.println(i + " год является високосным");
+        sum = amount;
+        month = 0;
+        while (sum < desiredSum) {
+            sum = (int) (sum * (1 + percent));
+            month++;
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + " сумма накоплений равна " + sum + " рублей");
+            }
         }
-
-        // task 6
         System.out.println("Task 6");
-        for (int i = 1; i <= 100; i = i + 7) {
-            System.out.println("Каждое число больше предыдущего на 7 - " + i);
+        sum = amount;
+        month = 0;
+        int months = 9 * 12;
+        while (month < months) {
+            sum = (int) (sum * (1 + percent));
+            month++;
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + " сумма накоплений равна " + sum + " рублей");
+            }
         }
-
-        // task 7
         System.out.println("Task 7");
-        for (int i = 2; i <= 520; i = i * 2) {
-            System.out.println("Каждое число больше предыдущего в 2 раза - " + i);
+        int firstFriday = 3;
+        for (int day = firstFriday; day <= 31; day+=7) {
+            System.out.println("Сегодня пятница, " + day + "-е число. Необходимо подготовить отчет");
         }
-
-        // task 8
         System.out.println("Task 8");
-        int hoard = 29000;
-        int total = 0;
-        for (int i = 1; i <= 12; i++) {
-            total = total + hoard;
-            System.out.println("Месяц " + i + " Итого " + total);
+        int period = 79;
+        int startSeeing = 0;
+        int start = currentYear - 200;
+        int end = currentYear + 100;
+        for (int year = startSeeing; year < end; year+=period) {
+            if (year > start) {
+                System.out.println(year);
+            }
         }
-
-        // task 9
-        System.out.println("Task 9");
-        int save = 29000;
-        int savingsAmount = 0;
-        for (int i = 1; i <= 12; i++) {
-            savingsAmount = savingsAmount + savingsAmount / 100;
-            savingsAmount = savingsAmount + save;
-            System.out.println("Месяц " + i + " Сумма накоплений равна " + savingsAmount);
         }
-
-        // task 10
-        System.out.println("Task 10");
-        int number = 2;
-        for (int j = 1; j <= 10; j++) {
-            System.out.println(number + "*" + j + "=" + number * j);
-        }
-
     }
-}
